@@ -5,7 +5,7 @@ Example code for unbalanced linear optimal transport analysis with Hellinger--Ka
 * lib contains the actual python code, with a simple Sinkhorn solver, and basic implementations for linearized W and HK embeddings, as well as some utilities such as rasterizing point clouds and setting up optimal transport problems
 * data contains the samples for the first example in the paper, ellipses of varying elongation and size. As reference measure the linear mean is prepared.
 * experiments contains the linear embeddings computed for these samples
-* <001_Demo-Compute-Pairwise-Transport-ExpMaps.ipynb> demonstrates how the (un-)balanced optimal transport problem between two measures can be solved, how the linear embeddings are obtained from the optimal plans, and a simple example on how to use the exponential map
-* <002_Compute-Linear-Embedding-W2.ipynb> computes the linear embeddings for all samples for the W2 metric
-* <003_Compute-Linear-Embedding-HK.ipynb> computes the linear embeddings for all samples for the HK metric
-* <004_TangentSpaceAnalysis.ipynb> provides a simple PCA analysis in tangent space as well as rudimentary visualizations as given in the paper
+* [001_Demo-Compute-Pairwise-Transport-ExpMaps.ipynb](./001_Demo-Compute-Pairwise-Transport-ExpMaps.ipynb) demonstrates how the (un-)balanced optimal transport problem between two measures can be solved, how the linear embeddings are obtained from the optimal plans, and a simple example on how to use the exponential map
+* [002_Compute-Linear-Embedding-W2.ipynb](./002_Compute-Linear-Embedding-W2.ipynb) computes the linear embeddings for all samples for the W2 metric
+* [003_Compute-Linear-Embedding-HK.ipynb](./003_Compute-Linear-Embedding-HK.ipynb) computes the linear embeddings for all samples for the HK metric
+* [004_TangentSpaceAnalysis.ipynb](./004_TangentSpaceAnalysis.ipynb) provides a simple PCA analysis in tangent space as well as rudimentary visualizations as given in the paper
