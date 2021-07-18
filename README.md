@@ -1,2 +1,11 @@
 # UnbalancedLOT
-Example code for unbalanced linear optimal transport analysis with Hellinger--Kantorovich metric.
+Example code for unbalanced linear optimal transport analysis with Hellinger--Kantorovich metric as introduced in [Tianji Cai, Junyi Cheng, Bernhard Schmitzer, Matthew Thorpe: The Linearized Hellinger-Kantorovich Distance, 2021, https://arxiv.org/abs/2102.08807]. The code reproduces the first numerical example in the paper with the ellipses but it can easily be adapted to other applications. All code is written in Python / numpy / scipy without any additional exotic dependencies. To solve the numerical optimal transport problem entropy regularization is used and a simple implementation of a stabilized Sinkhorn algorithm, as outlined in [Bernhard Schmitzer: Stabilized Sparse Scaling Algorithms for Entropy Regularized Transport Problems, SIAM Journal on Scientific Computing (SISC) 41(3), 2019, https://arxiv.org/abs/1610.06519]. This does not use a coarse-to-fine scheme. It will scale ok for a few hundreds of points per marginal. For larger examples we recomend more sophisticated solvers such as https://www.kernel-operations.io/geomloss/ or https://bernhard-schmitzer.github.io/MultiScaleOT/.
+
+## Outline of repository
+* lib contains the actual python code, with a simple Sinkhorn solver, and basic implementations for linearized W and HK embeddings, as well as some utilities such as rasterizing point clouds and setting up optimal transport problems
+* data contains the samples for the first example in the paper, ellipses of varying elongation and size. As reference measure the linear mean is prepared.
+* experiments contains the linear embeddings computed for these samples
+* <001_Demo-Compute-Pairwise-Transport-ExpMaps.ipynb> demonstrates how the (un-)balanced optimal transport problem between two measures can be solved, how the linear embeddings are obtained from the optimal plans, and a simple example on how to use the exponential map
+* <002_Compute-Linear-Embedding-W2.ipynb> computes the linear embeddings for all samples for the W2 metric
+* <003_Compute-Linear-Embedding-HK.ipynb> computes the linear embeddings for all samples for the HK metric
+* <004_TangentSpaceAnalysis.ipynb> provides a simple PCA analysis in tangent space as well as rudimentary visualizations as given in the paper
